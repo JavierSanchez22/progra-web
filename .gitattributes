@@ -1,16 +1,14 @@
 * text=auto
-
-*.sh     text eol=lf      # Scripts de shell (bash)
-*.py     text eol=lf      # Archivos Python
-*.js     text eol=lf      # JavaScript
-*.ts     text eol=lf      # TypeScript
-*.json   text eol=lf      # JSON (configuraciones)
-*.html   text eol=lf      # HTML
-*.css    text eol=lf      # CSS
-*.md     text eol=lf      # Markdown
-*.yml    text eol=lf      # YAML (ej: GitHub Actions)
-*.xml    text eol=lf      # Archivos XML
-
+*.sh     text eol=lf      
+*.py     text eol=lf    
+*.js     text eol=lf     
+*.ts     text eol=lf     
+*.json   text eol=lf     
+*.html   text eol=lf   
+*.css    text eol=lf   
+*.md     text eol=lf    
+*.yml    text eol=lf      
+*.xml    text eol=lf     
 *.png    binary
 *.jpg    binary
 *.jpeg   binary
@@ -20,9 +18,7 @@
 *.zip    binary
 *.mp4    binary
 *.mp3    binary
-
 *.pem    text eol=lf
 *.key    text eol=lf
 *.crt    text eol=lf
-
 *.bat    text eol=crlf
