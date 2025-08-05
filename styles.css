@@ -150,3 +150,21 @@ input:focus{
     background-color: #36a420;
 }
 
+.create-page-link{
+    text-align: center;
+    margin-top: 28px;
+    font-size: 14px;
+    color: #1c1e21;
+    max-width: 396px;
+}
+
+.create-page-link a{
+    color: #1c1e21;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.create-page-link a:hover{
+    text-decoration: underline;
+}
+
