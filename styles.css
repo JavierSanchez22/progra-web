@@ -94,3 +94,22 @@ input {
     width: 100%;
 }
 
+.main-content{
+    display: grid;
+    grid-template-columns: 1fe 1fr;
+    align-items: center;
+    padding: 80px;
+    gap: 40px;
+}
+
+.intro-text h2{
+    font-size: 28px;
+    color: #1c1e21;
+    font-weight: normal;
+    line-height: 1.34;
+}
+
+.image-container img{
+    max-width: 100%;
+}
+
