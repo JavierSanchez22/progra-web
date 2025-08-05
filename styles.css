@@ -168,3 +168,39 @@ input:focus{
     text-decoration: underline;
 }
 
+.footer{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px 80px;
+    margin-top: auto;
+}
+
+.languages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 13px;
+    margin-bottom: 15px;
+}
+
+.languages a{
+    color: #8a8d91;
+    text-decoration: none;
+    font-size: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.languages button{
+    width: 30px;
+    height: 20px;
+    color: #666869;
+    font-weight: bold;
+}
+
+.languages a:hover{
+    text-decoration: underline;
+}
