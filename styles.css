@@ -9,3 +9,14 @@ body {
     background-color: #f0f2f5;
     height: 100vh;
 }
+
+.header {
+    background-color: #ffffff;
+    padding: 20px 80px;
+}
+
+.logo {
+    color: #1877f2;
+    font-size: 40px;
+    font-weight: bold;
+}
