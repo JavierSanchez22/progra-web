@@ -1,13 +1,96 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Inicia sesión o registrate</title>
+    <link rel="stylesheet" href="src/style.css">
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="container">
+        <main class="main-content">
+            <section class="intro-section">
+                <h1 class="logo">facebook</h1>
+                <div class="intro-text">
+                    <h2>Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida</h2>
+                </div>
+            </section>
+            <section class="login-section">
+                <div class="login-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico o número de teléfono</label>
+                            <input type="text" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+
+                        <button type="submit" class="login-btn">Iniciar Sesión</button>
+                        <a href="#" class="frogot-password">¿Has olvidado la contraseña?</a>
+                        <div class="divider"></div>
+                        <button type="button" class="create-account">Crear una cuenta</button>
+                    </form>
+                </div>
+                <div class="create-page-link">
+                    <strong><a href="#">Crea una página</a></strong> para un famoso, una marca o un negocio.
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="languages-section">
+                <div class="languages">
+                    <a href="#">Español</a>
+                    <a href="#">English (US)</a>
+                    <a href="#">Português (Brasil)</a>
+                    <a href="#">Français (France)</a>
+                    <a href="#">한국어</a>
+                    <a href="#">Italiano</a>
+                    <a href="#">Deutsch</a>
+                    <a href="#">Bahasa Indonesia</a>
+                    <a href="#">العربية</a>
+                    <a href="#">हिन्दी</a>
+                    <a href="#">中文(简体)</a>
+                    <button type="button">+</button>
+                </div>
+            </section>
+            <section class="meta-links-section">
+                <div class="meta-links">
+                    <a href="#">Registrarte</a>
+                    <a href="#">Iniciar sesión</a>
+                    <a href="#">Messenger</a>
+                    <a href="#">Facebook Lite</a>
+                    <a href="#">Video</a>
+                    <a href="#">Meta Pay</a>
+                    <a href="#">Meta Store</a>
+                    <a href="#">Meta Quest</a>
+                    <a href="#">Ray-Ban Meta</a>
+                    <a href="#">Meta AI</a>
+                    <a href="#">Más contenido de Meta AI</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Threads</a>
+                    <a href="#">Centro de información de votación</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Centro de privacidad</a>
+                    <a href="#">Información</a>
+                    <a href="#">Crear anuncio</a>
+                    <a href="#">Crear página</a>
+                    <a href="#">Desarrolladores</a>
+                    <a href="#">Empleo</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Opciones de anuncios</a>
+                    <a href="#">Condiciones</a>
+                    <a href="#">Ayuda</a>
+                    <a href="#">Subir contactos y no usuarios</a>
+                </div>
+            </section>
+            <section class="copyright-section">
+                <div class="copyright">
+                    <p>Meta © 2025</p>
+                </div>    
+            </section>
+        </footer>
+    </div>
   </body>
 </html>
