@@ -38,5 +38,5 @@ jobs:
         # Subir archivos a S3
         aws s3 sync ./dist s3://tarea-03-javiersanchez --delete
         
-        # Invalidar caché de CloudFront
+        # Invalidar caché
         aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
