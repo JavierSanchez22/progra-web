@@ -19,4 +19,4 @@
 
 ## URL de CloudFront
 
-URL: [Click aquí](https://dyo1ssdmkvhe7.cloudfront.net/)
+URL: [Click aquí](https://dyo1ssdmkvhe7.cloudfront.net/index.html)
