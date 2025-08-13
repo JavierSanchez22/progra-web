@@ -14,6 +14,9 @@
 **Creación de proyecto VITE**
 ![](./images/InstalarVite.png)
 
+**Github Actions**
+![](./images/deploy.png)
+
 ## URL de CloudFront
 
-URL: [Click aquí](https://dyo1ssdmkvhe7.cloudfront.net/) _No jala :(_
+URL: [Click aquí](https://dyo1ssdmkvhe7.cloudfront.net/)
