@@ -42,10 +42,4 @@ jobs:
           aws cloudfront create-invalidation \
             --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths "/*"
-
-      - name: Debug AWS Configuration
-        run: |
-          echo "AWS Region: ${{ secrets.AWS_REGION }}"
-          echo "S3 Bucket: ${{ secrets.S3_BUCKET }}"
-          echo "CloudFront ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}"
-          aws sts get-caller-identity
+            
