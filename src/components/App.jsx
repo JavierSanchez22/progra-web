@@ -4,6 +4,7 @@ import './App.css'
 function App() {
   const [pokemon, setPokemon] = useState([])
   const [currentPage, setCurrentPage] = useState(0)
+  const [loading, setLoading] = useState(false)
   const pokemonPerPage = 20
   const totalPages = Math.ceil(pokemon.length / pokemonPerPage)
 
@@ -16,6 +17,7 @@ function App() {
   }
 
   const fetchPokemons = async () => {
+    setLoading(true)
     try {
       const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=200')
       const data = await response.json()
@@ -30,12 +32,15 @@ function App() {
       setPokemon(pokemonDetails)
     } catch (error) {
       console.error('Error fetching pokemons: ', error)
+    } finally {
+      setLoading(false)
     }
   }
 
   return (
     <div className='AppPokemon'>
       <h1>Mi pokedex</h1>
+      {loading && <p>Cargando pokemons...</p>}
       <button onClick={fetchPokemons}>Cargar Pokemons</button>
       <p>Pokemons encontrados: {pokemon.length}</p>
       <div className="pokemon-grid">
