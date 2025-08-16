@@ -5,6 +5,8 @@ function App() {
   const [pokemon, setPokemon] = useState([])
   const [currentPage, setCurrentPage] = useState(0)
   const [loading, setLoading] = useState(false)
+  const [selectPokemon, setSelectPokemon] = useState(null)
+
   const pokemonPerPage = 20
   const totalPages = Math.ceil(pokemon.length / pokemonPerPage)
 
@@ -45,7 +47,9 @@ function App() {
       <p>Pokemons encontrados: {pokemon.length}</p>
       <div className="pokemon-grid">
         {pokemon.map((poke) => (
-        <div key={poke.name} className='pokemon-card'>
+        <div key={poke.id} className={`pokemon-card ${selectPokemon?.id == poke.id === poke.id ? 'expanded' : ''}`}
+          onMouseEnter={() => setSelectPokemon(poke)}
+          onMouseLeave={() => setSelectPokemon(null)}>
           <h2>{poke.name}</h2>
           <img src={poke.sprites.front_default} alt={poke.name}/>
           <p>Altura: {poke.height}</p>
