@@ -29,15 +29,12 @@ function App() {
       <h1>Mi pokedex</h1>
       <button onClick={fetchPokemons}>Cargar Pokemons</button>
       <p>Pokemons encontrados: {pokemon.length}</p>
-      <div>
+      <div className="pokemon-grid">
         {pokemon.map((poke) => (
-          <div key={poke.id} className='card'>
-            <h2>{poke.name}</h2>
-            <img src={poke.sprites.front_default} alt={poke.name} />
-            <p>Altura: {poke.height}</p>
-            <p>Peso: {poke.weight}</p>
-            <p>Tipo: {poke.types.map((type) => type.type.name).join(', ')}</p>
-          </div>
+        <div key={poke.name} className='pokemon-card'>
+          <h2>{poke.name}</h2>
+          <img src={poke.sprites.front_default} alt={poke.name}/>
+        </div>
         ))}
       </div>
     </div>
