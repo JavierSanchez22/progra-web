@@ -34,6 +34,9 @@ function App() {
         <div key={poke.name} className='pokemon-card'>
           <h2>{poke.name}</h2>
           <img src={poke.sprites.front_default} alt={poke.name}/>
+          <p>Altura: {poke.height}</p>
+          <p>Peso: {poke.weight}</p>
+          <p>Tipo: {poke.types.map((type) => type.type.name).join(', ')}</p>
         </div>
         ))}
       </div>
