@@ -7,7 +7,7 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [selectedPokemon, setSelectedPokemon] = useState(null)
 
-  const pokemonPerPage = 10
+  const pokemonPerPage = 18
   const totalPages = Math.ceil(pokemon.length / pokemonPerPage)
 
   useEffect(() => {
@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className='AppPokemon'>
-      <h1>Mi Pokedex</h1>
+      <h1>Pokedex</h1>
       
       {loading ? (
         <div className="loading">Cargando Pokémons...</div>
