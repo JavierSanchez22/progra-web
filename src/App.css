@@ -1,9 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Luckiest+Guy&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .app {
   min-height: 100vh;
   background: linear-gradient(135deg, #070b20 0%, #18006e 100%);
   padding: 20px;
+}
+
+.body{
+  background-color: blue;
+
 }
 
 .container {
@@ -21,4 +38,142 @@ h1 {
   font-family: "Bungee", sans-serif;
   letter-spacing: 4px;
   text-shadow: 2px 2px 0px #6bd5ff;
+}
+
+.task-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.task-input:focus {
+  border-color: #667eea;
+}
+
+.add-btn {
+  padding: 12px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.add-btn:hover {
+  background: #5a67d8;
+}
+
+.task-filter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.filter-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.task-stats {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #c4c4c4;
+  font-weight: 500;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: all 0.3s;
+}
+
+.task-item:hover {
+  border-color: #667eea;
+  transform: translateY(-1px);
+}
+
+.task-item.completed {
+  opacity: 0.7;
+  background: #f0f9ff;
+}
+
+.task-checkbox {
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.task-name {
+  flex: 1;
+  font-size: 16px;
+  font-family: "Indie Flower", cursive;
+}
+
+.task-item.completed .task-name {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: #ff3742;
+}
+
+.no-tasks {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 40px;
 }
