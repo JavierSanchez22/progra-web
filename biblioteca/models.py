@@ -13,3 +13,19 @@ class Author(models.Model):
     class Meta:
         verbose_name = "Author"
         verbose_name_plural = "Authors"
+
+
+# Second Model - Editorial (with Fk to Author)
+class Editorial(models.Model):
+    name = models.CharField(max_length=100)
+    address = models.TextField()
+    phone = models.CharField(max_length=15)
+    email = models.EmailField()
+    founder = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='editorials')  # ForeignKey
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = "Editorial"
+        verbose_name_plural = "Editorials"
