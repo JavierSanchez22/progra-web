@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Author
 from .models import Editorial
+from .models import Book
 
 @admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
@@ -15,3 +16,11 @@ class EditorialAdmin(admin.ModelAdmin):
     search_fields = ['name']
     ordering = ['name']
     autocomplete_fields = ['founder']
+
+@admin.register(Book)
+class BookAdmin(admin.ModelAdmin):
+    list_display = ['title', 'author', 'publication_date', 'pages'] 
+    list_filter = ['author', 'publication_date'] 
+    search_fields = ['title', 'isbn']
+    ordering = ['title']
+    autocomplete_fields = ['author'] 
