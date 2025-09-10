@@ -45,3 +45,26 @@ class Book(models.Model):
     class Meta:
         verbose_name = "Book"
         verbose_name_plural = "Books"
+
+
+# Fourth Model - Loan (With FK to Author and Book)
+class Loan(models.Model):
+    STATE_CHOICES = [
+        ('ACTIVE', 'Active'),
+        ('RETURNED', 'Returned'),
+        ('OVERDUE', 'Overdue'),
+    ]
+    
+    book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='loans')
+    user = models.CharField(max_length=100)
+    loan_date = models.DateField(auto_now_add=True)
+    return_date = models.DateField()
+    status = models.CharField(max_length=10, choices=STATE_CHOICES, default='ACTIVE')
+    borrower_author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='loans')
+
+    def __str__(self):
+        return f"Loan of {self.book.title} to {self.user}"
+    
+    class Meta:
+        verbose_name = "Loan"
+        verbose_name_plural = "Loans"        
