@@ -29,3 +29,19 @@ class Editorial(models.Model):
     class Meta:
         verbose_name = "Editorial"
         verbose_name_plural = "Editorials"
+
+
+# Third Model - Book (with FK to Author)
+class Book(models.Model):
+    title = models.CharField(max_length=200)
+    isbn = models.CharField(max_length=13, unique=True)
+    publication_date = models.DateField()
+    pages = models.IntegerField()
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books')  # Solo FK a Author
+    
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        verbose_name = "Book"
+        verbose_name_plural = "Books"
