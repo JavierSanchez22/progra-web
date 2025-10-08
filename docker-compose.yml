@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: djangolint_app
+    # Wait for db to be ready, then migrate and start server
+    command: >
+      sh -c "until nc -z db 5432; do echo 'waiting for db...'; sleep 1; done;
+             python manage.py migrate --noinput &&
+             python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
