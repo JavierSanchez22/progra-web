@@ -18,6 +18,8 @@ class SecretAPIView(APIView):
         if not redis_instance:
             return Response({"error": "No se pudo conectar a la base de datos."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         key = secrets.token_urlsafe(16)
+        while redis_instance.exists(key):
+            key = secrets.token_urlsafe(16)
         redis_instance.set(key, secret_value, ex=86400)
         return Response({"key": key}, status=status.HTTP_201_CREATED)
 
