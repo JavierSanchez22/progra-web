@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend
+    container_name: secret_api
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    container_name: secret_ui
+    ports:
+      - "3000:80"
+
+  redis:
+    image: "redis:alpine"
+    container_name: redis_db
+    ports:
+      - "6379:6379"

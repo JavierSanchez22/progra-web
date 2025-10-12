@@ -1,2 +1,3 @@
-# progra-web
-Space for Programacion Web course tasks
+# Secret Link Generator
+
+Project to generate single-use links for sharing secrets
