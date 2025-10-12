@@ -1,15 +1,23 @@
 services:
   backend:
-    build: ./backend
+    build:
+      context: ./backend
     container_name: secret_api
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend/djangoApp:/app
     ports:
       - "8000:8000"
+    depends_on:
+      - redis
 
   frontend:
     build: ./frontend
     container_name: secret_ui
     ports:
       - "3000:80"
+    depends_on:
+      - backend
 
   redis:
     image: "redis:alpine"
